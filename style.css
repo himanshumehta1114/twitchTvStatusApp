@@ -1,0 +1,16 @@
+table{
+	margin-top: 10px !important;
+	margin: auto;
+	width: 50% !important;
+	text-align: center;
+}
+
+thead{
+	background: #2c3e50;
+	color: #fff;
+	font-size: 60px;
+}
+
+td {
+	background: #9b59b6;
+}
