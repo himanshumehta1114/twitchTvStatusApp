@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>TwitchTv Streamers</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="app.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,7 +13,7 @@
 <body>
 	<div class="container-fluid">
 
-		<table class="table table-striped">
+		<table class="table">
 			<thead>
 				<th colspan="3">TWITCH STREAMERS</th>
 			</thead>
@@ -22,7 +23,7 @@
 					<td id="name">name</td>
 					<td id="status">status</td>
 				</tr>
-								<tr>
+				<tr>
 					<td><img src="" href="#" alt="channel logo" id="logo"></td>
 					<td id="name">name</td>
 					<td id="status">status</td>
@@ -32,13 +33,5 @@
 
 	</div>
 
-	<script type="text/javascript">
-		$.getJSON('https://wind-bow.gomix.me/twitch-api/channels/twitch?callback=?', function(data) {
-  		var logoSrc = data.logo;
-  		$("#logo").attr('src',logoSrc);
-  		$("#name").text(data.display_name);
-  		$("#status").text(data.status);
-});
-	</script>
 </body>
 </html>
