@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TwitchTv Streamers</title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Twitch Streamers</h1>
+
+	<script type="text/javascript">
+		$.getJSON('https://wind-bow.gomix.me/twitch-api/channels/twitch?callback=?', function(data) {
+  console.log(data);
+});
+	</script>
+</body>
+</html>
