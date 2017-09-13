@@ -11,16 +11,21 @@
 </head>
 <body>
 	<div class="container-fluid">
-	
-		<table>
+
+		<table class="table table-striped">
 			<thead>
 				<th colspan="3">TWITCH STREAMERS</th>
 			</thead>
 			<tbody>
 				<tr>
-					<td>logo</td>
-					<td>name</td>
-					<td>status</td>
+					<td><img src="" href="#" alt="channel logo" id="logo"></td>
+					<td id="name">name</td>
+					<td id="status">status</td>
+				</tr>
+								<tr>
+					<td><img src="" href="#" alt="channel logo" id="logo"></td>
+					<td id="name">name</td>
+					<td id="status">status</td>
 				</tr>
 			</tbody>
 		</table>
@@ -29,7 +34,10 @@
 
 	<script type="text/javascript">
 		$.getJSON('https://wind-bow.gomix.me/twitch-api/channels/twitch?callback=?', function(data) {
-  console.log(data);
+  		var logoSrc = data.logo;
+  		$("#logo").attr('src',logoSrc);
+  		$("#name").text(data.display_name);
+  		$("#status").text(data.status);
 });
 	</script>
 </body>
